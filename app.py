@@ -16,6 +16,9 @@ def new_game():
     # welcome_msg = render_template('welcome')
     return question("What do you want me to do?")
 
+@ask.intent
+def running_status():
+    return statement("poo poo poo poo")
 
 @ask.intent("FetchMyPnrStatus")
 def fetch_my_pnr_status():
