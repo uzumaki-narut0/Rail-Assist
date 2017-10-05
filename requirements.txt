@@ -1,0 +1,7 @@
+Flask==0.12
+flask_restful==0.3.5
+flask-cors
+flask-ask
+Jinja2
+Werkzeug
+wsgiref
