@@ -5,14 +5,10 @@ import logging
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
 
-
 app = Flask(__name__)
-
 ask = Ask(app, "/")
-
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
-var api_key = "beiifc3h3m";
+api_key = "beiifc3h3m";
 base_url = "http://api.railwayapi.com/v2/pnr-status/pnr/<pnr no>/apikey/";
 pnr_no = str(6306534268);
 full_url = base_url + pnr_no + "/apikey/" + api_key;
