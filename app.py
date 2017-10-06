@@ -21,7 +21,7 @@ def running_status():
 
 @ask.intent("FetchMyPnrStatus")
 def fetch_my_pnr_status():
-    return question('What is your PNR number?')
+    return question('What is your PNR number?').reprompt('May I please have your PNR number')
 
 @ask.intent("PNRNumber")
 def pnr_status(pnr):
