@@ -8,11 +8,12 @@ from flask_ask import Ask, statement, question, session
 app = Flask(__name__)
 ask = Ask(app, "/")
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+
 api_key = "beiifc3h3m";
 base_url = "http://api.railwayapi.com/v2/pnr-status/pnr/";
 pnr_no = str(6306534268);
 full_url = base_url + pnr_no + "/apikey/" + api_key;
-# json.loads()
+
 @ask.launch
 def new_request():
     return question("What do you want me to do?")
