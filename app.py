@@ -25,8 +25,10 @@ def running_status():
 def fetch_my_pnr_status():
     print(full_url)
     r = requests.get(full_url)
-    print(r.json())
-    return statement("for the night is dark and full of terrors")
+    json_data = r.json();
+    # print(r.json())
+    return statement(json_data['passengers'][0]['current_status'])
+    # return statement("for the night is dark and full of terrors")
 
 port = int(os.getenv('PORT', 5000))
 app.run(debug=False, port=port, host='0.0.0.0')
