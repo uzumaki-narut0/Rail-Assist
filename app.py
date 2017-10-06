@@ -24,9 +24,9 @@ def fetch_my_pnr_status():
     return question('What is your PNR number?')
 
 @ask.intent("PNRNumber")
-def pnr_status(pnr_no):
+def pnr_status(pnr):
     # x = ("pnr number is {}".format(pnr_no))
-    return statement("pnr number is {}".format(pnr_no))
+    return statement("pnr number is {}".format(pnr))
     # full_url = base_url + x + "/apikey/" + api_key;
     # r = requests.get(full_url)
     # json_data = r.json();
