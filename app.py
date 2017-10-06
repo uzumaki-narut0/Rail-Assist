@@ -25,7 +25,7 @@ def fetch_my_pnr_status():
 
 @ask.intent("PNRNumber")
 def pnr_status(pnr_no):
-    x = str(pnr_no);
+    x = str(type(pnr_no))
     return statement(x)
     # full_url = base_url + x + "/apikey/" + api_key;
     # r = requests.get(full_url)
