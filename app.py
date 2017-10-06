@@ -26,10 +26,11 @@ def fetch_my_pnr_status():
 @ask.intent("PNRNumber")
 def pnr_status(pnr_no):
     x = str(pnr_no);
-    full_url = base_url + x + "/apikey/" + api_key;
-    r = requests.get(full_url)
-    json_data = r.json();
-    return statement(json_data['passengers'][0]['current_status'])
+    return statement(x)
+    # full_url = base_url + x + "/apikey/" + api_key;
+    # r = requests.get(full_url)
+    # json_data = r.json();
+    # return statement(json_data['passengers'][0]['current_status'])
 
 port = int(os.getenv('PORT', 5000))
 app.run(debug=False, port=port, host='0.0.0.0')
