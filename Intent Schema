@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "intent": "FetchMyPnrStatus"
+    },
+    {
+      "intent": "RunningStatus"
+    },
+    {
+      "slots": [
+        {
+          "name": "pnr",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "PNRNumber"
+    }
+  ]
+}
