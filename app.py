@@ -19,9 +19,22 @@ def new_request():
 def running_status():
     return statement("poo poo poo poo")
 
+@ask.intent("FetchStationName")
+def fetch_station_name():
+    return question('What is the station code?').reprompt('May I please have the station code?')
+
+@ask.intent("StationCode")
+def station_code(stationcode):
+    x = str(pnr)
+    # return statement("pnr number is {}".format(pnr))
+    full_url = base_url + x + "/apikey/" + api_key;
+    r = requests.get(full_url)
+    json_data = r.json();
+    return statement(json_data['passengers'][0]['current_status'])
+
 @ask.intent("FetchMyPnrStatus")
 def fetch_my_pnr_status():
-    return question('What is your PNR number?').reprompt('May I please have your PNR number')
+    return question('What is your PNR number?').reprompt('May I please have your PNR number?')
 
 @ask.intent("PNRNumber")
 def pnr_status(pnr):
