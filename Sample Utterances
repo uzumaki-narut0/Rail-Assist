@@ -3,4 +3,6 @@ FetchMyPnrStatus find my pnr status
 FetchMyPnrStatus get my pnr status
 RunningStatus fetch run status
 RunningStatus fetch running status
+RunningStatus find my running status
+RunningStatus get my running status
 PNRNumber {pnr}
