@@ -25,12 +25,12 @@ def fetch_station_name():
 
 @ask.intent("StationCode")
 def station_code(stationcode):
-    x = str(pnr)
+    x = str(stationcode)
     # return statement("pnr number is {}".format(pnr))
-    full_url = base_url + x + "/apikey/" + api_key
-    r = requests.get(full_url)
-    json_data = r.json()
-    return statement(json_data['passengers'][0]['current_status'])
+    #full_url = base_url + x + "/apikey/" + api_key
+    #r = requests.get(full_url)
+    #json_data = r.json()
+    return statement('Work in progress!')
 
 @ask.intent("FetchMyPnrStatus")
 def fetch_my_pnr_status():
